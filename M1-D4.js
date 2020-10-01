@@ -1,20 +1,4 @@
 
-
-Skip to content
-Using Gmail with screen readers
-Meet
-Start a meeting
-Join a meeting
-Hangouts
-
-1 of 32,594
-(no subject)
-Inbox
-
-Federico Soncini <federico.soncini@gmail.com>
-16:09 (7 minutes ago)
-to me
-
 /*
 ASSIGNMENT RULES
 - All the answers must be in JavaScript
@@ -93,7 +77,6 @@ Write a function "check3and7" which accepts a positive number and check if it is
 HINT: Module Operator
 */
 
-/*
 
 const Check3and7 = function(x) {
     if (x%3===0) {
@@ -105,26 +88,8 @@ const Check3and7 = function(x) {
     else
     return "x is neither a multiple of 3 or 7";
 } 
-*/
-
-//with switch
-const Check3and7 = function(x) {
-    switch(x) {
-        case (x%3===0) :
-            return "x is a multiple of 3";
-            break;
-        case (x%7===0) :
-            return "x is a multiple of 7";
-            break;
-        default:
-            return "x is neither a multiple of 3 or 7";
-            break;
-        }
-}
-    
-console.log(Check3and7(49)); //TODO
-
-
+  
+console.log(Check3and7(49)); 
 
 
 
@@ -145,9 +110,12 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 
 const UpperFirst = function(str) {
     let stringArray = str.split(" ");
+
     for (let i = 0; i < stringArray.length; i++) {
-        stringArray[i]
+        let firstLetter = stringArray[i].charAt(0).toUpperCase();
+        stringArray[i] = firstLetter + stringArray[i].substr(1);
     }
+    return stringArray.join(" ");
 }
 
 console.log(UpperFirst("Lo Stile di quelli che non hanno stile"));
@@ -158,7 +126,9 @@ Write a function "cutString" to create a new string without the first and last c
 
 
 const CutString = function (str) {
-    str.slice(1,-1);
+    let cut_string = str.slice(1,-1);
+    return cut_string;
+
 }
 console.log(CutString("Strive"));
 
@@ -167,7 +137,16 @@ console.log(CutString("Strive"));
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10
 */
 
-/* WRITE YOUR CODE HERE */
+const GiveMeRandom = function(n) {
+    let random_array = [];
+    let ARR_LENGTH = n;
+    for (let i = 0; i < ARR_LENGTH; i++) {
+        random_array.push(Math.random(0,10));
+    }
+    return random_array;
+}
+
+console.log(GiveMeRandom(12));
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit with your tutor.
