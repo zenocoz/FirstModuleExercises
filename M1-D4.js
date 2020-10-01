@@ -15,7 +15,7 @@ const area = function(l1, l2) {
 }
 
 console.log("Area of the Rectangle: ", area(2,2));
-//alternative
+//alternative with arrow function
 //const area = (l1, l2) => l1*l2;
 
 
@@ -91,8 +91,6 @@ const Check3and7 = function(x) {
 console.log(Check3and7(49)); 
 
 
-
-
 /* EXERCISE 7
 Write a function "reverseString" to reverse programmatically a given string (es.: Strive => evirtS).
 */
@@ -109,7 +107,6 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 
 const UpperFirst = function(str) {
     let stringArray = str.split(" ");
-
     for (let i = 0; i < stringArray.length; i++) {
         let firstLetter = stringArray[i].charAt(0).toUpperCase();
         stringArray[i] = firstLetter + stringArray[i].substr(1);
@@ -117,7 +114,7 @@ const UpperFirst = function(str) {
     return stringArray.join(" ");
 }
 
-console.log(UpperFirst("Lo Stile di quelli che non hanno stile")); //TODO array not modified
+console.log(UpperFirst("Lo Stile di quelli che non hanno stile")); 
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
