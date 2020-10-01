@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+=======
+
+
+Skip to content
+Using Gmail with screen readers
+Meet
+Start a meeting
+Join a meeting
+Hangouts
+
+1 of 32,594
+(no subject)
+Inbox
+
+Federico Soncini <federico.soncini@gmail.com>
+16:09 (7 minutes ago)
+to me
+
+>>>>>>> 971f0a4b593677303ee4dae1c01e6e423438f1c9
 /*
 ASSIGNMENT RULES
 - All the answers must be in JavaScript
@@ -105,7 +125,14 @@ const Check3and7 = function(x) {
         }
 }
     
+<<<<<<< HEAD
 console.log(Check3and7(49)); 
+=======
+console.log(Check3and7(49)); //TODO
+
+
+
+>>>>>>> 971f0a4b593677303ee4dae1c01e6e423438f1c9
 
 
 
@@ -117,13 +144,18 @@ const ReverseString = function (str) {
     return str.split("").reverse().join("");
 }
 
+<<<<<<< HEAD
 console.log(ReverseString("ParmaCalcio")); 
+=======
+console.log(ReverseString("ParmaCalcio")); //TODO
+>>>>>>> 971f0a4b593677303ee4dae1c01e6e423438f1c9
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as parameter
 */
 
 const UpperFirst = function(str) {
+<<<<<<< HEAD
     let stringArray = str.split(",");
     for (let i = 0; i < stringArray.length; i++) {
         stringArray[i].charAt(0).toUpperCase();
@@ -132,6 +164,15 @@ const UpperFirst = function(str) {
 }
 
 console.log(UpperFirst("Lo Stile di quelli che non hanno stile")); //TODO array not modified
+=======
+    let stringArray = str.split(" ");
+    for (let i = 0; i < stringArray.length; i++) {
+        stringArray[i]
+    }
+}
+
+console.log(UpperFirst("Lo Stile di quelli che non hanno stile"));
+>>>>>>> 971f0a4b593677303ee4dae1c01e6e423438f1c9
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
@@ -139,8 +180,12 @@ Write a function "cutString" to create a new string without the first and last c
 
 
 const CutString = function (str) {
+<<<<<<< HEAD
     let cutstring = str.slice(1,-1)
     return cutstring;
+=======
+    str.slice(1,-1);
+>>>>>>> 971f0a4b593677303ee4dae1c01e6e423438f1c9
 }
 console.log(CutString("Strive"));
 
@@ -149,13 +194,21 @@ console.log(CutString("Strive"));
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10
 */
 
+<<<<<<< HEAD
 const GiveMeRandom = function(n) {
     let random_array = Math.random(0,n);
     return random_array;
 }
 
 console.log(GiveMeRandom(6));
+=======
+/* WRITE YOUR CODE HERE */
+>>>>>>> 971f0a4b593677303ee4dae1c01e6e423438f1c9
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit with your tutor.
 */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 971f0a4b593677303ee4dae1c01e6e423438f1c9
