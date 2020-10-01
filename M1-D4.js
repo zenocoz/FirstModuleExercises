@@ -1,4 +1,3 @@
-
 /*
 ASSIGNMENT RULES
 - All the answers must be in JavaScript
@@ -102,7 +101,7 @@ const ReverseString = function (str) {
     return str.split("").reverse().join("");
 }
 
-console.log(ReverseString("ParmaCalcio")); //TODO
+console.log(ReverseString("ParmaCalcio")); 
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as parameter
@@ -118,7 +117,7 @@ const UpperFirst = function(str) {
     return stringArray.join(" ");
 }
 
-console.log(UpperFirst("Lo Stile di quelli che non hanno stile"));
+console.log(UpperFirst("Lo Stile di quelli che non hanno stile")); //TODO array not modified
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
@@ -151,4 +150,3 @@ console.log(GiveMeRandom(12));
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit with your tutor.
 */
-
