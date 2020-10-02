@@ -37,7 +37,7 @@ let random = Math.random(0,20);
 const Me = {
   name : "Federico",
   surname : "Soncini",
-  age : 43,
+  age : 34,
 };
 
 /* Ex.E 
@@ -557,5 +557,3 @@ const movies = [
   },
 ];
 
-
-//console.log(OlderMovie());
