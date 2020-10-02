@@ -540,6 +540,7 @@ const HalfTree = function(height) {
   *****
 */
 /*
+//TODO 
 const Tree = function(height) {
   let h = height
   let i = 0;
