@@ -1,0 +1,124 @@
+<html>
+<!--
+        You have been assigned to the creation of a Smartphone Shop Website.
+        The shop is just a showcase of the products of the shop with some extra informations.
+        No shopping cart / checkout features are required.
+        EX1.:
+        Add H1 title with the name of the shop
+        EX2.: 
+        Add a TABLE with the top 5 products of the shop
+        EX3.: 
+        Each product should have one image, title, description and price
+        EX4.:
+        Add Map to the shop 
+        EX5.: 
+        Add the links to Amazon products for each item in the table
+        EX6.:
+        Add a footer with the address and the name of the shop
+        EX7.: 
+        Add a message board where the user can type a message in it (only client side)
+        // EXTRA 
+        EX8.: 
+        Write a function to change the heading text
+        EX9.:
+        Write a function to change the page background color
+        EX10.:
+        Write a function to change the footer address with a fake one
+    -->
+
+<head>
+    <meta charset="utf-8">
+        <title>ShoppingShopWebsite</title>
+
+
+</head>
+
+<body>
+    <div class = "name-wrapper" ></div>
+        <h1 id = "name" > The Masters of the Universe Store</h1>  
+    </div> 
+
+    <span > 
+        <table id ="table"">
+            <h2>Top Sellers</h2>
+            <tr>
+                <th>He-Man</th>
+                <td> <img src =  "https://files.azoo.co/generate/402/1600/p1400534-(1)/1-he-man.jpg" style = "width:10%"</td>
+                <td>The Strongest Man of the Universe</td>
+                <td>45$</td>
+                <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4" target=_blank">Amazon</a></td>
+   
+            </tr>
+            <tr>    
+                <th>Skeletor</th>
+                <td> <img src =  "https://files.azoo.co/generate/402/1600/p1410617-(1)/1-skeletor.jpg" style = "width:10%"</td>
+                <td>A very evil Skeleton</td>
+                <td>45$</td>
+                <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4" target=_blank">Amazon</a></td>
+              
+            </tr>
+            <tr>
+                <th>Stratos</th>
+                <td> <img src =  "https://files.azoo.co/generate/402/1600/p1400402-(1)/1-stratos-schlechter-zustand.jpg" style = "width:10%"</td>
+                <td>Cool, fast and furry</td>
+                <td>45$</td>
+                <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4" target=_blank">Amazon</a></td>
+            </tr>
+            <tr>
+                <th>Orko</th>
+                <td> <img src =  "https://files.azoo.co/generate/402/1600/p1400703-(1)/1-orko.jpg" style = "width:10%"</td>
+                <td>A Ghost?</td>
+                <td>45$</td>
+                <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4" target=_blank">Amazon</a></td>
+            </tr>
+            <tr>
+                <th>Evil Lyn</th>
+                <td> <img src =  "https://files.azoo.co/generate/402/1600/p1410215-(1)/1-evil-lyn.jpg" style = "width:10%"</td>
+                <td>Evil with some magic powers</td>
+                <td>45$</td>
+                <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4" target=_blank">Amazon</a></td>
+            </tr>
+
+        </table>
+
+    </span>
+
+    <div id="map" style = "width:10%">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9710.531797494781!2d13.413306!3d52.5219814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sen!2sde!4v1601905162343!5m2!1sen!2sde" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <footer id ="address">
+        <p>The Masters of the Universe Store - 10000 Alexanderplatz, 10405 Berlin, Germany</p>
+      </footer>
+
+      <div>   
+        <label for="comment">Send us a request</label>
+        <textarea id="comment" type="text">
+            
+      </div>
+      <script>
+
+        function changeHeader(name) {
+            let new_name = name;
+            let id_name = document.querySelector("#name");
+            id_name = name;
+        }
+        
+        function changeColor(color) {
+            let new_color = color;
+            let current_color = document.querySelector("html");
+            current_color.style.backgroundColor(new_color);
+        }
+
+
+        function fakeFooter() {
+            let fake_address = "Via della Conciliazione 1";
+            let address = document.querySelector("#address");
+            address.textContent = fake_address;
+        }
+
+      </script>
+
+</body>
+
+</html>
