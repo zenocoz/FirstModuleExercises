@@ -29,8 +29,6 @@
 <head>
     <meta charset="utf-8">
         <title>ShoppingShopWebsite</title>
-
-
 </head>
 
 <body>
@@ -47,7 +45,6 @@
                 <td>The Strongest Man of the Universe</td>
                 <td>45$</td>
                 <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4" target=_blank">Amazon</a></td>
-   
             </tr>
             <tr>    
                 <th>Skeletor</th>
@@ -93,7 +90,7 @@
 
       <div>   
         <label for="comment">Send us a request</label>
-        <textarea id="comment" type="text">
+        <textarea id="comment" type="text"> </textarea>
             
       </div>
       <script>
@@ -101,15 +98,13 @@
         function changeHeader(name) {
             let new_name = name;
             let id_name = document.querySelector("#name");
-            id_name = name;
+            id_name.textContent = new_name;
         }
         
         function changeColor(color) {
             let new_color = color;
-            let current_color = document.querySelector("html");
-            current_color.style.backgroundColor(new_color);
+            let current_color = document.body.style.backgroundColor = new_color;
         }
-
 
         function fakeFooter() {
             let fake_address = "Via della Conciliazione 1";
