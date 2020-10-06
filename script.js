@@ -76,8 +76,6 @@
   const changeListTitle = function (content) {
       let list_title = document.querySelector("listTitle").innerText;
       list_title=content;
-    
-
   };
 
   /* EXERCISE 6
