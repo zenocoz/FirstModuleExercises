@@ -29,16 +29,38 @@
 <head>
     <meta charset="utf-8">
         <title>ShoppingShopWebsite</title>
+        <script src="script.js"></script>
 </head>
 
 <body>
     <div class = "name-wrapper" ></div>
-        <h1 id = "name" > The Masters of the Universe Store</h1>  
+        <h1 id = "name" onmouseover = "addClassToTitle()" onmouseout = "removeClassFromTitle()"> The Masters of the Universe Store</h1>  
     </div> 
+    <h2 id="listTitle">Todo List</h2>
+          <ul id="firstList">
+              <li><p>1st</p></li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <ul id="secondList">
+              <li>1st</li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <div>
+              <p>This text is just for the exercise</p>  
+             <input type="button" id="changeP" value="Click to change text" />
+             <textarea id="newTitles" type="text"> Enter comments </textarea>
+             <textarea id="addToSecond" type="text"> Add name </textarea>
+             <textarea id="disappearList" type="text"> Make it disappear </textarea>
+            
+              
+          </div>
 
     <span > 
         <table id ="table" style="width:50%"">
             <h2>Top Sellers</h2>
+            <input type="button" id="toggle" value="Click to toggle images" />
             <tr>
                 <th>Name</th>
                 <th>image</th>
@@ -95,23 +117,7 @@
         <textarea id="comment" type="text"> </textarea>
             
       </div>
-      <script>
-        function changeHeader(name) {
-            let new_name = name;
-            let id_name = document.querySelector("#name");
-            id_name.textContent = new_name;
-        }
-        
-        function changeColor(color) {
-            let new_color = color;
-            let current_color = document.body.style.backgroundColor = new_color;
-        }
-
-        function fakeFooter() {
-            let fake_address = "Via della Conciliazione 1";
-            document.querySelector("footer").innerText = fake_address;
-        }
-      </script>
+   
 
 </body>
 
