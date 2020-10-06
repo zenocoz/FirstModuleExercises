@@ -4,7 +4,7 @@
      Create a new welcome alert message when the page successfully loads
     */
   window.onload = function () {
-      alert("Welcome to the Masters Store");
+      window.alert("Welcome to the Masters Store");
       let button = document.querySelector("#changeP");
       button.onclick = changePContent;
       let toggle_img = document.querySelector("#toggle");
@@ -16,6 +16,7 @@
   */
   const changeTitle = function (newTitle) {
     document.querySelector("title").innerText = newTitle;
+    //document.title
   };
   /* EXERCISE 3a
       Write a function to add a class to the page's h1 title in "red-color" (execute the function when title is hovered by mouse).
@@ -72,20 +73,21 @@
   /* EXERCISE 5
       Write a function to change the list title (you can use previous day's textarea as input or create a new text input field to grab the content)
   */
- //TODO 
   const changeListTitle = function (content) {
-      let list_title = document.querySelector("listTitle").innerText;
-      list_title=content;
+      let list_title = document.querySelector("#listTitle");
+      list_title.innerText = content.target.value;  
+      console.log(content);
   };
+
+
 
   /* EXERCISE 6
        Write a function to add a new item ONLY to the second list (create an input field + add button)
   */
   const addToTheSecond = function (content) {
-      let secondList = document.querySelector("#secondList").append(content); //TODO test
+      document.querySelector("#secondList").appendChild(content.nodeName); //TODO test
 
   };
-
 
   /* EXERCISE 7
       Write a function to make the first UL disappear (button)
@@ -109,9 +111,9 @@
       HINT use mouseenter / mouseleave events
   */
   const makeThemMagnifiable = function () {
-      let table_children = document.querySelector("table").childNodes;
+      let table_children = document.querySelector("td");
       for (let i = 0; i < table_children.length; i++) {
-          if (table_children[i].nodeValue !== "IMG" ) {
+          if (table_children[i].contains("I") ) {
               //increase the font. find some method...
           }
       }
@@ -142,7 +144,7 @@
   /*EXERCISE 12
     Refactor your HTML code with HTML5 semantic tags such as header, section, footer, etc*/
 
-  //"LEGACY" CODE
+  //"LEGACY" CODE from Day 6
   
   function changeHeader(name) {
       let new_name = name;

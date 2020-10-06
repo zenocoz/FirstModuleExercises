@@ -50,8 +50,9 @@
           <div>
               <p>This text is just for the exercise</p>  
              <input type="button" id="changeP" value="Click to change text" />
-             <textarea id="newTitles" type="text"> Enter comments </textarea>
-             <textarea id="addToSecond" type="text"> Add name </textarea>
+             <textarea id="newTitle" onchange="changeListTitle(event)"> List Name</textarea>
+             <button type="button"for="addToSecond" onclick="addToTheSecond(event)"></button>
+             <input id="addToSecond"> Add to Second List </input>
              <textarea id="disappearList" type="text"> Make it disappear </textarea>          
           </div>
 
