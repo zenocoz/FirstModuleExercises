@@ -85,7 +85,9 @@
        Write a function to add a new item ONLY to the second list (create an input field + add button)
   */
   const addToTheSecond = function (content) {
-      document.querySelector("#secondList").appendChild(content.nodeName); //TODO test
+      let new_item = document.createElement("li");
+      new_item.innerText = content.target.value;
+      document.querySelector("#secondList").appendChild(new_item); //TODO test
 
   };
 
