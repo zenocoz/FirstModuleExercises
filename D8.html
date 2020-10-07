@@ -68,11 +68,11 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
 
     <hr />
 
-    <input type="color" placeholder="Color" id="colorPicker" onchange="changeTaskBackgroundColor(event)" />
+    <input type="color" placeholder="Color" id="colorPicker" onchange="getColor()" />
     <input
       type="button" class ="btn"
       value="Change task background"
-      onclick="changeTaskBackgroundColor(event)"
+      onclick="changeTaskBackgroundColor()"
     />
 
     <hr />
@@ -123,8 +123,8 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
     const removeFirst = function() {
         let items_arr = document.querySelectorAll("li");
         console.log(items_arr);
-        items_arr.shift();//TODO same as above
-
+        items_arr.shift();//TODO ???
+    }
       /* EXERCISE 8: 
                Create a method "getTasksAsArray" which returns (and print to the console) an array containing the tasks as string
             */
@@ -142,11 +142,17 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
                Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
                onchange event listener ad applies it as background to every list item
             */
-    const changeTaskBackgroundColor = function(color) {
-        console.log(color);
+
+    const getColor = function () {
+        let color = document.querySelector("#colorPicker");
+        return color;
+    }
+
+    const changeTaskBackgroundColor = function() {
+        let new_color = getColor();
         let items_arr = document.querySelectorAll('li');
         for (let item of items_arr) {    
-            item.style.backgroundColor = color.target.value;
+            item.style.backgroundColor = new_color.target.value;
         }    
     }
     
