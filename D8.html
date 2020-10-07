@@ -50,8 +50,8 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
       then press "Add new task"</span
     ><br /><br />
 
-    <input type="text" id="newTask" />
-    <input type="button" class="btn" value="Add new Task" onclick="addNewTask(event)" />
+    <input type="text" id="newTask" onchange="getInput()" />
+    <input type="button" class="btn" value="Add new Task" onclick="addNewTask()" />
 
     <!-- EXERCISE 3
         Create a button "Remove Last Task" to trigger the method "remov/eLast"
@@ -72,12 +72,12 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
     <input
       type="button" class ="btn"
       value="Change task background"
-      onclick="changeTaskBackgroundColor()"
+      onclick="changeTaskBackgroundColor(event)"
     />
 
     <hr />
 
-    <input type="button" class = "btn" value="Sort" onclick="bubblesort()" />
+    <input type="button" class = "btn" value="Sort" onclick="bubbleSort()" />
 
     <script>
       /* EXERCISE 5: 
@@ -89,20 +89,22 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
             */
 
   
-    let task_list = document.querySelector("#myTaskList");
+    task_list = document.querySelector("#myTaskList");
 
-    //TODO NOT PASSING THE RIGHT ARGUMENT
-    const addNewTask = function(task) {   
+    const getInput = function() {
+        let input_ = document.querySelector("#newTask");
+        let input_field = input_.value;
+        console.log(input_.value);
+        return input_field;
+    }
+
+    const addNewTask = function() {   
         let new_item = document.createElement("li");
-        new_item.innerText = task.target.value;
+        new_item.innerText = getInput();
         task_list.appendChild(new_item);
         console.log(task_list);
     }
 
-    /*
-    window.addEventListener("DOMContentLoaded", function () {
-      
-    });*/
 
       /* EXERCISE 6: 
                 Create a method "removeLast" which removes the last item from the task list
@@ -110,7 +112,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
     const removeLast = function() {
         let items_arr = document.querySelectorAll("li");
         console.log(items_arr);
-        items_arr.pop(); //TODO 
+        items_arr.pop(); //TODO Error pop() is not a function.
     }
         
 
@@ -121,8 +123,8 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
     const removeFirst = function() {
         let items_arr = document.querySelectorAll("li");
         console.log(items_arr);
-        items_arr.shift();//TODO ???
-    }
+        items_arr.shift();//TODO same as above
+
       /* EXERCISE 8: 
                Create a method "getTasksAsArray" which returns (and print to the console) an array containing the tasks as string
             */
@@ -145,23 +147,35 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
         let items_arr = document.querySelectorAll('li');
         for (let item of items_arr) {    
             item.style.backgroundColor = color.target.value;
-        }
-        
-
+        }    
     }
-
-      /* EXTRA */
+    
+    /* EXTRA */
 
       /* EXERCISE 10: 
                Create a method "bubbleSort()" which sort the task list alphabetically using the bubble sort algorithm
-
-               
-            
+         
                Use your spare time to beautify your task list with CSS.
                Suggestion:
                - Break the code into many function for semplicity 
                - Reuse the functions previously created
             */
+
+    const bubbleSort = function () {
+        //localeCompare(string) returns -1 if string on which is called comes before other string, 0 if equal, 1 if after.
+        let item_arr = document.querySelectorAll("li");
+        let temp;
+        for (let i = 0; i <item_arr.length;i++) {
+            for (let j = i+1; j < item_arr.length;j++) {
+                if (item_arr[i].localeCompare(item_arr[j]) > 0) {
+                    temp = item_arr[i];
+                    item_arr[i] = item_arr[j];
+                    item_arr[j] = temp;             
+                }
+            }
+        }
+        return item_arr; 
+    }
     </script>
   </body>
 </html>
