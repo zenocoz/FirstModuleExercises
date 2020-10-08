@@ -89,13 +89,11 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
             */
 
   
-    task_list = document.querySelector("#myTaskList");
+    let task_list = document.querySelector("#myTaskList");
 
     const getInput = function() {
         let input_ = document.querySelector("#newTask");
-        let input_field = input_.value;
-        console.log(input_.value);
-        return input_field;
+        return input_.value;
     }
 
     const addNewTask = function() {   
@@ -109,10 +107,10 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
       /* EXERCISE 6: 
                 Create a method "removeLast" which removes the last item from the task list
             */
-    const removeLast = function() {
-        let items_arr = document.querySelectorAll("li");
-        console.log(items_arr);
-        items_arr.pop(); //TODO Error pop() is not a function.
+    const removeLast = function() {    
+        if(task_list.hasChildNodes) {
+          task_list.removeChild(task_list.lastChild);
+        }
     }
         
 
@@ -121,9 +119,9 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
             */
 
     const removeFirst = function() {
-        let items_arr = document.querySelectorAll("li");
-        console.log(items_arr);
-        items_arr.shift();//TODO ???
+      if(task_list.hasChildNodes) {
+          task_list.removeChild(task_list.firstChild);
+        }
     }
       /* EXERCISE 8: 
                Create a method "getTasksAsArray" which returns (and print to the console) an array containing the tasks as string
@@ -145,6 +143,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
 
     const getColor = function () {
         let color = document.querySelector("#colorPicker");
+        console.log(color);
         return color;
     }
 
