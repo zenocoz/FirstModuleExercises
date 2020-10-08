@@ -50,7 +50,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
       then press "Add new task"</span
     ><br /><br />
 
-    <input type="text" id="newTask" onchange="getInput()" />
+    <input type="text" id="newTask"/>
     <input type="button" class="btn" value="Add new Task" onclick="addNewTask()" />
 
     <!-- EXERCISE 3
@@ -68,11 +68,11 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
 
     <hr />
 
-    <input type="color" placeholder="Color" id="colorPicker" onchange="getColor()" />
+    <input type="color" placeholder="Color" id="colorPicker" onchange="changeTaskBackgroundColor(event)" />
     <input
       type="button" class ="btn"
       value="Change task background"
-      onclick="changeTaskBackgroundColor()"
+      onclick="getColor()"
     />
 
     <hr />
@@ -91,14 +91,14 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
   
     let task_list = document.querySelector("#myTaskList");
 
-    const getInput = function() {
+ /*    const getInput = function() {
         let input_ = document.querySelector("#newTask");
         return input_.value;
-    }
+    } */
 
     const addNewTask = function() {   
         let new_item = document.createElement("li");
-        new_item.innerText = getInput();
+        new_item.innerText = document.querySelector("#newTask").value;
         task_list.appendChild(new_item);
         console.log(task_list);
     }
@@ -110,7 +110,9 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
     const removeLast = function() {    
         if(task_list.hasChildNodes) {
           task_list.removeChild(task_list.lastChild);
-        }
+        } else
+        return;
+
     }
         
 
@@ -140,18 +142,18 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
                Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
                onchange event listener ad applies it as background to every list item
             */
-    //TODO improve with different event listener perhaps
+/*     
     const getColor = function () {
-        let color = document.querySelector("#colorPicker");
-        console.log(color);
+        let color = task_list.childNodes.target.value;
+        
         return color;
     }
-
-    const changeTaskBackgroundColor = function() {
-        let new_color = getColor();
-        let items_arr = document.querySelectorAll('li');
-        for (let item of items_arr) {    
-            item.style.backgroundColor = new_color.target.value;
+ */
+    const changeTaskBackgroundColor = function(color) {
+        let color_ = color.target.value;
+        let items = task_list.childNodes;
+        for (let item of items) {    
+            item.style.backgroundColor = color_;
         }    
     }
     
@@ -181,7 +183,6 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
                 }
             }
         }
-       \
     }
     </script>
   </body>
