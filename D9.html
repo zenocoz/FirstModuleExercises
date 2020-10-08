@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        BINGO CHALLENGE!!!
+        Create programmatically (with JS) a BINGO board with 76 cells, from 1 to 76.
+        Create a button to randomize a number from 1 to 76. The same number should be highlighted on the bingo board
+
+        EXTRA: 
+        - Take ALWAYS a new number (avoid randoming 10 3 times for example)
+        - Create a USER BOARD with random 24 numbers that highlights as the main board does
+        - Let the user choose HOW MANY user boards he's willing to play with and create them.
+    -->
+    <head>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        body {
+          background-color: #f8f8f8;
+          font-family: "Poppins", sans-serif;
+          color: #1b1b1b;
+          max-width: 768px;
+          margin: 0 auto;
+          font-size: 18px;
+        }
+  
+        h1 {
+          font-size: 64px;
+          margin-bottom: 0;
+        }
+
+        button {
+          font-size: 36px;
+          margin-bottom: 1rem;
+
+        }
+      
+
+        .number {
+            display: inline-block;
+            width: 14%;
+            text-align: center;
+            min-height: 100px;
+            border: 1px solid transparent;
+        }
+  
+        h2 {
+          font-size: 36px;
+          margin-bottom: 1rem;
+        }
+  
+        #bingo {
+          background-color: #1b1b1b;
+          color: white;
+          width: 50%;
+          margin-bottom: 20px;
+          border: 6px solid #1b1b1b;
+          border-radius: 8px;
+        }
+
+
+        </style>
+
+    </head>
+    <body>
+        <h1>Bingo</h1>
+        <div id="bingo">
+            <!-- generate 76 bingo cells -->
+        </div>
+        <div id="btn">
+            <button type="button" onclick="Randomize()"">Randomize</button>
+        </div>
+    
+
+        <script>
+        let bingo = document.querySelector("#bingo"); //reference to bingo div
+
+        //let cells = [];
+        window.onload = function() {          
+            generateBingoTable();  
+
+        }
+
+        const generateBingoTable = function() {
+            
+            
+            for (let i = 0; i < 76; i++) {
+                //cells[i] = [];
+                const child = document.createElement("div"); // create an empty number cell
+                child.className = "number"; // assigning the CSS class
+                const number = document.createElement("h3");
+                number.innerText = i+1;
+                child.appendChild(number);
+                bingo.appendChild(child);
+
+                //highlighting logic
+                //get number and highlight it on the cell, by finding it in the bingo.Child.innerText
+                }
+            }
+
+           
+            const Randomize = function () {
+                //let random = document.querySelector("#btn");//reference to btn div
+                let cells = bingo.childNodes;
+                const random_int = Math.floor(Math.random() * 77);
+                let number = cells[random_int+2];
+                number.style.color = "yellow";
+                if(isSelected) {
+                    number.style.color = "white";
+                    isSelected = false;
+                }          
+            
+                
+            }
+
+            const highlight = function () {
+
+            }
+           
+
+        </script>
+    </body>
+</html>
