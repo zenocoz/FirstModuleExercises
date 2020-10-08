@@ -13,7 +13,7 @@
     <head>
         <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calendar</title>
+    <title>Bingo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap"
       rel="stylesheet"
@@ -74,54 +74,81 @@
         <div id="btn">
             <button type="button" onclick="Randomize()"">Randomize</button>
         </div>
+        <h2>User Board</h2>
+        <button type="button" onclick="generateBoard()">Click to Add User Board</button>
     
-
         <script>
         let bingo = document.querySelector("#bingo"); //reference to bingo div
+        
+        //TODO Refactor
 
-        //let cells = [];
         window.onload = function() {          
-            generateBingoTable();  
-
+            generateBingoTable();
         }
+        let already_visited = []; //array of extracted bingo numbers
+        let already_generated = []; //array of existing numbers in player board
+        //let cells_visited = [] //array of already visited cell nodes;
+        let cells24 = [] //array of generated board nodes
 
-        const generateBingoTable = function() {
-            
-            
+        const generateBingoTable = function() {            
             for (let i = 0; i < 76; i++) {
-                //cells[i] = [];
                 const child = document.createElement("div"); // create an empty number cell
                 child.className = "number"; // assigning the CSS class
                 const number = document.createElement("h3");
-                number.innerText = i+1;
+                number.innerText = i+1; 
+                number.id = "num" + i;  // TODO Refactor I am not using the ids.
                 child.appendChild(number);
                 bingo.appendChild(child);
+                }
+            }
+      
+             const Randomize = function () {
+                let cells = bingo.childNodes;             
+                const random_int = Math.floor(Math.random() * 77);
+                let number = cells[random_int+2];
+                if (already_visited.includes(random_int)) {
+                    console.log("visited");
+                } else {
+                    number.style.color = "yellow";
+                    //cells_visited.push(number);
+                    already_visited.push(random_int);
+                }
+                //TODO add the condition that board must exist
+                Randomize24(number);
+            }
 
-                //highlighting logic
-                //get number and highlight it on the cell, by finding it in the bingo.Child.innerText
+        const Randomize24 = function(node) {
+            let n = node.innerText;
+            for (let i = 0; i < cells24.length; i++) {
+                if (cells24[i].innerText === n) {
+                    cells24[i].style.color = "yellow";
                 }
             }
 
-           
-            const Randomize = function () {
-                //let random = document.querySelector("#btn");//reference to btn div
-                let cells = bingo.childNodes;
-                const random_int = Math.floor(Math.random() * 77);
-                let number = cells[random_int+2];
-                number.style.color = "yellow";
-                if(isSelected) {
-                    number.style.color = "white";
-                    isSelected = false;
-                }          
-            
-                
-            }
-
-            const highlight = function () {
-
-            }
-           
-
+        }        
+        const generateBoard = function () {
+            let board = bingo.cloneNode(true);
+            document.body.appendChild(board);
+            while (board.childNodes.length > 27) {
+                board.removeChild(board.lastChild);
+            } 
+            console.log(board);
+            for (let i = 0; i<board.childNodes.length; i++) {
+                let random_24 = Math.floor(Math.random() * 77);
+                if (already_generated.includes(random_24)&& i > 0) {
+                    board.childNodes[i].innerText = " ";
+                    --i;
+                    continue;
+                } else if (already_generated.includes(random_24) && i === 0) {
+                    board.childNodes[i].innerText = " ";
+                    --i;
+                    continue;   
+                }
+                already_generated.push(random_24);
+                board.childNodes[i].innerText = random_24;
+                cells24.push(board.childNodes[i]);          
+            }     
+        }
         </script>
     </body>
 </html>
