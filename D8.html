@@ -140,7 +140,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
                Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
                onchange event listener ad applies it as background to every list item
             */
-
+    //TODO improve with different event listener perhaps
     const getColor = function () {
         let color = document.querySelector("#colorPicker");
         console.log(color);
@@ -165,21 +165,23 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
                - Break the code into many function for semplicity 
                - Reuse the functions previously created
             */
-
+    //TODO fix
     const bubbleSort = function () {
         //localeCompare(string) returns -1 if string on which is called comes before other string, 0 if equal, 1 if after.
-        let item_arr = document.querySelectorAll("li");
+        let nodes = task_list.childNodes;
+        
+
         let temp;
-        for (let i = 0; i <item_arr.length;i++) {
-            for (let j = i+1; j < item_arr.length;j++) {
-                if (item_arr[i].localeCompare(item_arr[j]) > 0) {
-                    temp = item_arr[i];
-                    item_arr[i] = item_arr[j];
-                    item_arr[j] = temp;             
+        for (let i = 0; i <nodes.length;i++) {
+            for (let j = i+1; j < nodes.length;j++) {
+                if (nodes[i].localeCompare(nodes[j]) > 0) {
+                    temp = nodes[i];
+                    nodes[i] = nodes[j];
+                    nodes[j] = temp;             
                 }
             }
         }
-        return item_arr; 
+       \
     }
     </script>
   </body>
