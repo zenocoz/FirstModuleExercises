@@ -1,0 +1,39 @@
+/*--------------------------------CSS 11-20--------------------------------*/
+
+body {
+  max-width: 80%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  border-radius: 25px;
+  background: darkkhaki;
+}
+
+a {
+  color: red;
+}
+
+.border_ {
+  border-style: solid;
+}
+
+p {
+  margin-top: 2px;
+  margin-bottom: 3px;
+}
+
+.hide-content {
+  visibility: hidden;
+}
+
+td {
+  border-style: solid;
+  border-color: green;
+}
+
+th,
+td {
+  border-style: dotted;
+}
