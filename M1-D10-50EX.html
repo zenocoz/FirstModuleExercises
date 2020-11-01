@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+        HTML EXERCISES
+        1) Create a title for the page
+        2) Create a heading
+        3) Create an ordered list
+        4) Create a table with 5 columns and 4 rows
+        5) Add an image to each second cell of every row
+        6) Add a anchor link for every image
+        7) Merge together 2 table cells
+        8) Divide the page using a horizontal line
+        9) Create a container with a nested paragraph and a nested unordered list
+        10) Create a footer with some information about the page creator 
+        CSS EXERCISES
+        11) Give a maximum width to the body and center it in the page
+        12) Set every h1 to be centered
+        13) Change the color of each link in the page
+        14) Create a class with a border
+        15) Set table to have rounded corners
+        16) Add margin between every paragraph
+        17) Create a class which change font size and boldness
+        18) Create a class to hide a content
+        19) Add a green border to each td
+        20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) )
+        JS EXERCISES
+        21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe"
+        22) Create an object with properties such name, surname, email
+        23) Delete Email from the previously created object
+        24) Create an array with 10 strings in it
+        25) Print in the console every string in the previous array
+        26) Create an array with 100 random numbers in it
+        27) Wrote a function to get the MAX and the MIN from the previously created array
+        28) Create an array of arrays, in which every array has 10 random numbers
+        29) Create a function that gets 2 arrays and returns the longest one
+        30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+        DOM 
+        31) Get element with ID "container" from the page
+        32) Get every "td" from the page
+        33) Create a cycle that prints the text inside every td of the page
+        34) Write a function to change the heading of the page
+        35) Write a function to add an extra row to the table
+        36) Write a function to add the class "test" to each row in the table
+        37) Write a function to add a red background to every link in the page
+        38) Console log "Page loaded" when the page is correctly loaded
+        39) Write a function to add new items to a UL
+        40) Write a function to empty a list
+        EXTRA 
+        41) Add an eventListener to alert when the mouse is over a link, displaying the URL
+        42) Add a button to hide every image on the page
+        43) Add a button to hide and show the table from the page
+        44) Write a function to sum every number inside the TD (if the content is numeric)
+        45) Delete the last letter from the title each time the user clicks on it
+        46) Change a single TD background color when the user clicks on it
+        47) Add a button DELETE, on click it should delete a random TD from the page
+        48) Add a pink border to a cell when the mouse is over it
+        49) Write a function to add a table with 4 rows and 3 columns programmatically
+        50) Write a function to remove the table from the page
+    -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50EX.</title>
+</head>
+
+
+<body>
+    <h1>50 Exercises</h1>
+    <br>
+    <ol type="1">Languages
+
+        <li>C++</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Rust</li>
+        <li>Web Assembly</li>
+    </ol>
+    <br>
+    <table style="width: 50%">
+        <tr>
+            <th>
+                Language
+
+            </th>
+            <th>
+                Interpreted
+
+            </th>
+            <th>
+                Compiled
+
+            </th>
+            <th>
+                Typed
+
+            </th>
+            <th>
+                Usage
+            </th>
+
+        </tr>
+        <tr>
+            <td colspan="2">
+                C++
+
+                <a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+                        style="max-width:10%" alt="C++"">
+                                </a>
+                                No
+                            </td>
+                            <td>
+                                Yes
+                            </td>
+                            <td>
+                                Strongly
+                            </td>
+                            <td>
+                                Videogames
+                            </td>
+                    
+                    
+                        </tr>
+                        <tr>
+                            <td colspan=" 2">
+                    JavaScript
+                    <a href=" https://en.wikipedia.org/wiki/JavaScript" target="blank">
+                        <img src=" https://static.frontendmasters.com/assets/courses/2019-04-05-js-recent-parts/thumb@2x.jpg"
+                            style="max-width:10%" alt="C++"">
+                                </a>
+                                Yes
+                    
+                            </td>
+                            <td>
+                                No
+                            </td>
+                            <td>
+                                Loosely
+                            </td>
+                            <td>
+                                Web Development
+                            </td>
+                    
+                        </tr>
+                        <tr>
+                            <td>
+                                Python
+                            </td>
+                            <td>
+                                <a href=" https://en.wikipedia.org/wiki/Python_(programming_language)" target="blank">
+                        <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1200px-Python.svg.png"
+                            style="max-width:10%" alt="C++"">
+                                </a>
+                                Yes
+                    
+                            </td>
+                            <td>
+                                No
+                            </td>
+                            <td>
+                                Loosely
+                            </td>
+                            <td>
+                                Data Science/A.I.
+                            </td>
+                    
+                        </tr>
+                        <tr>
+                            <td>
+                                Rust
+                            </td>
+                            <td>
+                                <a href=" https://en.wikipedia.org/wiki/Rust_(programming_language)" target="blank">
+                        <img src="
+                                            https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png"
+                            style="max-width:10%" alt="C++"">
+                                </a>
+                                No
+                            </td>
+                            <td>
+                                Yes
+                            </td>
+                            <td>
+                                Strongly
+                            </td>
+                            <td>
+                                High-Performance Back-End
+                            </td>
+                        </tr>
+                    
+                    </table>
+                    <br>
+                    <hr>
+                    <div>
+                        <p>Type Of Smart Pointers introduced in C++ 11
+                            <ul>
+                                <li>
+                                    Unique Pointers (std::unique_ptr)
+                                </li>
+                                <li>
+                                    Shared Pointers (std::shared_ptr)
+                                </li>
+                                <li>
+                                    Weak Pointers (std::weak_ptre)
+                                </li>
+                                <li>
+                                    [Raw Pointer - not a smart pointer]
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                    <br>
+                    <footer>
+                      <p>Federico Soncini</p>
+                      <p>Bahnhofstraße 1, Nürnberg, Deutschland</p>
+                      <p>email: <a href=" federico.soncini@gmail.com"target="blank">federico.soncini@gmail.com</a></p>
+                    </footer>
+
+</body>
+
+</html>

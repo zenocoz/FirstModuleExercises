@@ -28,104 +28,116 @@
 
 <head>
     <meta charset="utf-8">
-        <title>ShoppingShopWebsite</title>
-        <script src="script.js"></script>
+    <title>ShoppingShopWebsite</title>
+    <script src="scriptD6.js"></script>
 </head>
 
 <body>
-    <div class = "name-wrapper" ></div>
-        <h1 id = "name" onmouseover = "addClassToTitle()" onmouseout = "removeClassFromTitle()"> The Masters of the Universe Store</h1>  
-    </div> 
+    <div class="name-wrapper"></div>
+    <h1 id="name" onmouseover="addClassToTitle()" onmouseout="removeClassFromTitle()"> The Masters of the Universe Store
+    </h1>
+    </div>
     <h2 id="listTitle">Todo List</h2>
-          <ul id="firstList">
-              <li><p>1st</p></li>
-              <li>2nd</li>
-              <li>3rd</li>
-          </ul>
-          <ul id="secondList">
-              <li>1st</li>
-              <li>2nd</li>
-              <li>3rd</li>
-          </ul>
-          <div>
-              <p>This text is just for the exercise</p>  
-             <input type="button" id="changeP" value="Click to change text" />
-             <textarea id="newTitle" onchange="changeListTitle(event)"> List Name</textarea>
+    <ul id="firstList">
+        <li>
+            <p>1st</p>
+        </li>
+        <li>2nd</li>
+        <li>3rd</li>
+    </ul>
+    <ul id="secondList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+    </ul>
+    <div>
+        <p>This text is just for the exercise</p>
+        <input type="button" id="changeP" value="Click to change text" />
+        <textarea id="newTitle" onchange="changeListTitle(event)"> List Name</textarea>
 
-            </div>
+    </div>
 
-            <div id="ex-6">
-                <input type="text" placeholder="add new element to list2">
-                <button>Ex-6 Add element</button>
-            </div>
+    <div id="ex-6">
+        <input type="text" placeholder="add new element to list2">
+        <button>Ex-6 Add element</button>
+    </div>
 
-             <button type="button" onclick="addToTheSecond()"></button>
-             <input type="text"id="addToSecond"> Add to Second List </input>
-            
-             <textarea id="disappearList" type="text"> Make it disappear </textarea>          
-          </div>
+    <button type="button" onclick="addToTheSecond()"></button>
+    <input type="text" id="addToSecond"> Add to Second List </input>
 
-    <span > 
-        <table id ="table" style="width:50%"">
+    <textarea id="disappearList" type="text"> Make it disappear </textarea>
+    </div>
+
+    <span>
+        <table id="table" style="width:50%"">
             <h2>Top Sellers</h2>
-            <input type="button" id="toggle" value="Click to toggle images" />
-            <tr>
-                <th>Name</th>
-                <th>image</th>
-                <th>Description</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>He-Man</td>    
-                <td> <img src =  "https://files.azoo.co/generate/402/1600/p1400534-(1)/1-he-man.jpg" style = "width:10%"></td>
-                <td>The Strongest Man of the Universe</td>
-                <td>45$</td>
-                <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4" target=_blank">Amazon</a></td>
-            </tr>
-            <tr>    
-                <td>Skeletor</td>
-                <td> <img src =  "https://files.azoo.co/generate/402/1600/p1410617-(1)/1-skeletor.jpg" style = "width:10%"></td>
-                <td>A very evil Skeleton</td>
-                <td>45$</td>
-                <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4" target=_blank">Amazon</a></td>            
-            </tr>
-            <tr>
-                <td>Stratos</td>
-                <td> <img src =  "https://files.azoo.co/generate/402/1600/p1400402-(1)/1-stratos-schlechter-zustand.jpg" style = "width:10%"></td>
-                <td>Cool, fast and furry</td>
-                <td>45$</td>
-                <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4" target=_blank">Amazon</a></td>
-            </tr>
-            <tr>
-                <td>Orko</td>
-                <td> <img src =  "https://files.azoo.co/generate/402/1600/p1400703-(1)/1-orko.jpg" style = "width:10%"></td>
-                <td>A Ghost?</td>
-                <td>45$</td>
-                <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4" target=_blank">Amazon</a></td>
-            </tr>
-            <tr>
-                <td>Evil Lyn</td>
-                <td> <img src =  "https://files.azoo.co/generate/402/1600/p1410215-(1)/1-evil-lyn.jpg" style = "width:10%"></td>
-                <td>Evil with some magic powers</td>
-                <td>45$</td>
-                <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4" target=_blank">Amazon</a></td>
-            </tr>
+            <input type=" button" id="toggle" value="Click to toggle images" />
+        <tr>
+            <th>Name</th>
+            <th>image</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>He-Man</td>
+            <td> <img src="https://files.azoo.co/generate/402/1600/p1400534-(1)/1-he-man.jpg" style="width:10%"></td>
+            <td>The Strongest Man of the Universe</td>
+            <td>45$</td>
+            <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4"
+                    target=_blank">Amazon</a></td>
+        </tr>
+        <tr>
+            <td>Skeletor</td>
+            <td> <img src="https://files.azoo.co/generate/402/1600/p1410617-(1)/1-skeletor.jpg" style="width:10%"></td>
+            <td>A very evil Skeleton</td>
+            <td>45$</td>
+            <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4"
+                    target=_blank">Amazon</a></td>
+        </tr>
+        <tr>
+            <td>Stratos</td>
+            <td> <img src="https://files.azoo.co/generate/402/1600/p1400402-(1)/1-stratos-schlechter-zustand.jpg"
+                    style="width:10%"></td>
+            <td>Cool, fast and furry</td>
+            <td>45$</td>
+            <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4"
+                    target=_blank">Amazon</a></td>
+        </tr>
+        <tr>
+            <td>Orko</td>
+            <td> <img src="https://files.azoo.co/generate/402/1600/p1400703-(1)/1-orko.jpg" style="width:10%"></td>
+            <td>A Ghost?</td>
+            <td>45$</td>
+            <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4"
+                    target=_blank">Amazon</a></td>
+        </tr>
+        <tr>
+            <td>Evil Lyn</td>
+            <td> <img src="https://files.azoo.co/generate/402/1600/p1410215-(1)/1-evil-lyn.jpg" style="width:10%"></td>
+            <td>Evil with some magic powers</td>
+            <td>45$</td>
+            <td><a href="https://www.amazon.de/Super7-Masters-Universe-Vintage-Collection/dp/B07H8ND8HH/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=he-man&qid=1601905022&sr=8-4"
+                    target=_blank">Amazon</a></td>
+        </tr>
         </table>
     </span>
 
-    <div id="map" style = "width:10%">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9710.531797494781!2d13.413306!3d52.5219814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sen!2sde!4v1601905162343!5m2!1sen!2sde" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <div id="map" style="width:10%">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9710.531797494781!2d13.413306!3d52.5219814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sen!2sde!4v1601905162343!5m2!1sen!2sde"
+            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
     </div>
-    <footer id ="address">
+    <footer id="address">
         <p>The Masters of the Universe Store - 10000 Alexanderplatz, 10405 Berlin, Germany</p>
-      </footer>
+    </footer>
 
-      <div>   
+    <div>
         <label for="comment">Send us a request</label>
         <textarea id="comment" type="text"> </textarea>
-            
-      </div>
-   
+
+    </div>
+
 
 </body>
 
