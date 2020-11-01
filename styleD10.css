@@ -37,3 +37,20 @@ th,
 td {
   border-style: dotted;
 }
+
+.button-style {
+  width: "fit-content";
+  height: 20px;
+  background: rgb(221, 195, 221);
+  border-style: solid;
+  border-radius: 25px;
+}
+
+.td-background {
+  background-color: darkorange;
+}
+
+.td-border {
+  border-style: solid;
+  border-color: pink;
+}
